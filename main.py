@@ -103,16 +103,15 @@ def main():
 			res = quote(w, limit=1)
 			for i in range(len(res)):
 				speaker.say("here's a wisdom")
+				st.info("Your Wisdom for today:\n"+res[i]['quote'])
 				speaker.say(res[i]['quote'])
 				speaker.runAndWait()
-				st.text(res[i]['quote'])
 
 
 		def love_words():
 			print("love")
 			speaker.say("you're amazing")
-			image = 'hart_love.png'
-			st.image(image,width=100)
+			speaker.runAndWait()
 
 		def hate_words():
 			speaker.say("but i love u")
@@ -146,7 +145,6 @@ def main():
 		def quit():
 			speaker.say("Bye")
 			speaker.runAndWait()
-			st.text("have a nice day!,bye")
 			sys.exit(0)
 
 		mappings = {
