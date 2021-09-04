@@ -1,4 +1,4 @@
-import pywhatkit
+# import pywhatkit
 from neuralintents import GenericAssistant
 import speech_recognition
 import pyttsx3 as tts
@@ -193,7 +193,7 @@ if submitButton:
                     song = recognizer.recognize_google(audio)
                     song = song.lower()
                     speaker.say('playing' + song)
-                    pywhatkit.playonyt(song)
+                    # pywhatkit.playonyt(song)
                     speaker.runAndWait()
                     done = True
 
