@@ -8,8 +8,13 @@ import streamlit as st
 from random_word import RandomWords
 import numpy as np
 import warnings
-warnings.filterwarnings("ignore")
+
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
+
+for wm in self._watched_modules.values():
+    if wm.module_name is not None and wm.module_name in sys.modules:
+        if wm.module_name != "warnings":
+            del sys.modules[wm.module_name]
 
 
 def local_css(file_name):
