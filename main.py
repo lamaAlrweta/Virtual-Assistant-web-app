@@ -2,7 +2,6 @@ import pywhatkit
 from neuralintents import GenericAssistant
 import speech_recognition
 import pyttsx3 as tts
-import sys
 from quote import quote
 import streamlit as st
 from random_word import RandomWords
@@ -206,7 +205,7 @@ if submitButton:
     def quit():
         speaker.say("Bye")
         speaker.runAndWait()
-        sys.exit(0)
+        st.stop()
 
     mappings = {
             "greeting": hello,
@@ -220,7 +219,7 @@ if submitButton:
             "exit": quit}
 
     assistent = GenericAssistant('intents.json', intent_methods=mappings)
-    # assistent.train_model()
+    assistent.train_model()
 
 
 
