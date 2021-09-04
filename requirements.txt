@@ -4,3 +4,4 @@ neuralintents==0.0.4
 SpeechRecognition==3.8.1
 pyttsx3==2.90
 streamlit==0.74.1
+RandomWords==0.3.0
