@@ -220,7 +220,7 @@ if submitButton:
             "exit": quit}
 
     assistent = GenericAssistant('intents.json', intent_methods=mappings)
-    assistent.train_model()
+#     assistent.train_model()
 
 
 
