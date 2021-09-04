@@ -3,12 +3,12 @@ from neuralintents import GenericAssistant
 import speech_recognition
 import pyttsx3 as tts
 import sys
-import warnings
 from quote import quote
 import streamlit as st
 from random_word import RandomWords
 import numpy as np
-
+import warnings
+warnings.filterwarnings("ignore")
 warnings.filterwarnings("ignore", category=np.VisibleDeprecationWarning)
 
 
