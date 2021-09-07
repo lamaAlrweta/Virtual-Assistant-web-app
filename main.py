@@ -1,4 +1,4 @@
-# import pywhatkit
+import pywhatkit
 from neuralintents import GenericAssistant
 import speech_recognition
 import pyttsx3 as tts
@@ -29,9 +29,9 @@ remote_css('https://fonts.googleapis.com/icon?family=Material+Icons')
 
 st.markdown("<h1 style='text-align: ; color: #FFFAFA;'>Your virtual intelligence assistant</h1>",
             unsafe_allow_html=True)
-st.markdown("<h3 style='text-align: ; color: #FFFAFA;'>Click and Say hello!</h3>", unsafe_allow_html=True)
+# st.markdown("<h3 style='text-align: ; color: #FFFAFA;'>Click and Say hello!</h3>", unsafe_allow_html=True)
 st.info("she's able to do the fllowing: \n - Play Songs. \n - say a wisdom. \n - create todo list. \n - create note. \n - show the todo list. ")
-submitButton = st.button("Play")
+submitButton = st.button("Click and say hello!")
 
 if submitButton:
     recognizer = speech_recognition.Recognizer()
@@ -193,7 +193,7 @@ if submitButton:
                     song = recognizer.recognize_google(audio)
                     song = song.lower()
                     speaker.say('playing' + song)
-                    # pywhatkit.playonyt(song)
+                    pywhatkit.playonyt(song)
                     speaker.runAndWait()
                     done = True
 
