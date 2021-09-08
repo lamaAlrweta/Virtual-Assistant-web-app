@@ -7,3 +7,4 @@ PyYAML==5.4.1
 streamlit==0.74.1
 Random-Word==1.0.7
 RandomWords==0.3.0
+PyAudio==0.2.11
